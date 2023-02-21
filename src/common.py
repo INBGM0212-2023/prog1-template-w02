@@ -4,6 +4,7 @@ import urllib
 from io import StringIO
 import os
 import urllib.request
+import solution
 
 MASTER_URL = r"https://raw.githubusercontent.com/INBGM0212-2023/exercises/main/week-02"
 
