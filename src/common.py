@@ -39,9 +39,9 @@ def run() -> None:
                                  stdout=subprocess.PIPE, timeout=float(conf["timeout-cmd"]), universal_newlines=False)
 
         channels = {
-            "in": [line.rstrip("\n") + "⇩" for line in test_case["in"].splitlines()],
-            "out": [line.rstrip("\n") + "⇩" for line in test_case["out"].splitlines()],
-            "act": [line.rstrip("\n") + "⇩" for line in process.stdout.decode("utf-8").splitlines()]
+            "in": [line.rstrip("\n") for line in test_case["in"].splitlines()],
+            "out": [line.rstrip("\n") for line in test_case["out"].splitlines()],
+            "act": [line.rstrip("\n") for line in process.stdout.decode("utf-8").splitlines()]
         }
 
         merged = []
